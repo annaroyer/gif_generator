@@ -7,6 +7,7 @@ describe 'As a visitor' do
       click_on 'Sign up for an account'
 
       expect(current_path).to eq(new_user_path)
+
       fill_in 'user[username]', with: 'giflover'
       fill_in 'user[password]', with: 'password'
       click_on 'Sign Up'
