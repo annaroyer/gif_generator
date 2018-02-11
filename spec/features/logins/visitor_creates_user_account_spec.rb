@@ -4,7 +4,7 @@ describe 'As a visitor' do
   context 'when I visit the homepage and click on create a new account' do
     scenario 'I can fill in the username and password, click submit and create a new account' do
       visit '/'
-      click_on 'Sign Up for an Account'
+      click_on 'Sign up for an account'
 
       expect(current_path).to eq(new_user_path)
       fill_in 'user[username]', with: 'giflover'
