@@ -5,4 +5,10 @@ FactoryBot.define do
     password 'Password'
     role 1
   end
+
+  factory :user do
+    sequence(:username) { |n| "User #{n}" }
+    password 'Password'
+    role 0
+  end
 end
