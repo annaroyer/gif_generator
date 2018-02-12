@@ -11,7 +11,7 @@ describe 'As a user' do
       click_on 'favorite'
 
       visit user_path(user)
-      expect(page).to have_xpath('//img[contains(@src,"#{gif.image_path}")]')
+      expect(page).to have_xpath("//img[contains(@src,'#{gif.image_path}')]")
       expect(page).to have_content(gif.category)
     end
   end
