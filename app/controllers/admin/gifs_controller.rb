@@ -22,8 +22,7 @@ class Admin::GifsController < Admin::BaseController
   end
 
   def gif_params
-    { id: gif_data.id,
-      category: params[:category],
+    { category: params[:category],
       image_path: gif_data.fixed_height_small_url }
   end
 end
