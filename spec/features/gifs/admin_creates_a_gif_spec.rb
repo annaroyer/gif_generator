@@ -7,8 +7,8 @@ describe 'As an admin' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(admin)
 
       visit new_admin_gif_path
-      fill_in 'gif[category]', with: 'burrito'
-      click_on 'generate gif'
+      fill_in 'Category', with: 'burrito'
+      click_on 'Generate Gif'
 
       expect(page).to have_content('burrito')
     end
