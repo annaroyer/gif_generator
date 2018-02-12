@@ -13,4 +13,16 @@ describe 'As an admin' do
       expect(page).to have_content('burrito')
     end
   end
+
+  describe 'As a user' do
+    context 'when I visit new admin gif path' do
+      scenario 'I see a 404 page' do
+        user = create(:user)
+        allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+
+        visit new_admin_gif_path
+        expect(page).to have_content("The page you were looking for doesn't exist")
+      end
+    end
+  end
 end
