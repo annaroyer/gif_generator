@@ -14,6 +14,11 @@ FactoryBot.define do
 
   factory :gif do
     category 'awesome'
-    image_path 'http://media2.giphy.com/media/FiGiRei2ICzzG/giphy.gif'
+    sequence(:image_path) { |n| "http://image.giphy.com/#{n}"}
+  end
+
+  factory :favorite do
+    gif
+    user
   end
 end
