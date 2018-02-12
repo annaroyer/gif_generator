@@ -14,6 +14,6 @@ FactoryBot.define do
 
   factory :gif do
     category 'awesome'
-    image_path 'http://media2.giphy.com/media/FiGiRei2ICzzG/200.gif'
+    image_path 'http://media2.giphy.com/media/FiGiRei2ICzzG/giphy.gif'
   end
 end
