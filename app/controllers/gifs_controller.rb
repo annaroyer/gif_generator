@@ -1,5 +1,5 @@
 class GifsController < ApplicationController
   def index
-    @gifs = Gif.all
+    @gifs = Gif.order(:category)
   end
 end
