@@ -19,4 +19,9 @@ describe User, type: :model do
   context 'security' do
     it { should have_secure_password }
   end
+
+  context 'relationships' do
+    it { should have_many :favorites }
+    it { should have_many :gifs }
+  end
 end
