@@ -2,4 +2,5 @@
 <% @gifs.each do |gif| %>
   <img src=<%= gif.image_path %> alt=<%= gif.category %>>
   <p><%= gif.category %></p>
+  <%= link_to 'favorite', favorites_path, method: :post %>
 <% end %>
