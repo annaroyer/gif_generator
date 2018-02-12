@@ -1,3 +1,4 @@
-class GifsController < Admin::BaseController
-  
+class Admin::GifsController < Admin::BaseController
+  def new
+  end
 end
