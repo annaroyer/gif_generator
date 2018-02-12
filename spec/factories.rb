@@ -11,4 +11,9 @@ FactoryBot.define do
     password 'Password'
     role 0
   end
+
+  factory :gif do
+    category 'awesome'
+    image_path 'http://media2.giphy.com/media/FiGiRei2ICzzG/200.gif'
+  end
 end
