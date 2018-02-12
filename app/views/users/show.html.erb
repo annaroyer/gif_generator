@@ -2,7 +2,7 @@
 
 <h1>Favorite Gifs</h1>
 <% current_user.gifs.each do |gif| %>
-  <img src=<%= gif.image_path  %>>
+  <img src=<%= gif.image_path %>>
   <p><%= gif.category %></p>
 <% end %>
 
