@@ -9,7 +9,6 @@ describe 'As an admin' do
       visit new_admin_gif_path
       fill_in 'Category', with: 'burrito'
       click_on 'Generate Gif'
-
       expect(page).to have_content('burrito')
     end
   end
