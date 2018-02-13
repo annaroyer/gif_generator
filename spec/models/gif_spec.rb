@@ -12,5 +12,6 @@ describe Gif, type: :model do
 
   context 'relationships' do
     it { should have_many :favorites }
+    it { should belong_to :category }
   end
 end
