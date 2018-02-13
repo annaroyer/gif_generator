@@ -4,7 +4,7 @@
 <% current_user.favorites.each do |favorite| %>
   <img src=<%= favorite.gif.image_path %>>
   <p><%= favorite.gif.category %></p>
-  <%= link_to 'Unfavorite', favorite_path(favorite), method: :delete %>
+  <%= link_to 'Unfavorite', favorite_path(favorite), method: 'delete' %>
 <% end %>
 
 <%= link_to 'Log Out', logout_path, method: :delete %>
