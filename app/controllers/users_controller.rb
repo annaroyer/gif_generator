@@ -14,6 +14,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @gifs = current_user.gifs.order(:category)
   end
 
   private
