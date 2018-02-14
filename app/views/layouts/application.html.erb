@@ -14,6 +14,18 @@
         <h1>GifGenerator</h1>
       </header>
       <nav class="navbar navbar-nav, navbar-right">
+        <div class="btn-group">
+          <button class="btn">
+            <%=  link_to 'Gifs', gifs_path %>
+          </button>
+          <button class="btn dropdown-toggle button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="caret"></span>
+            <span class="sr-only"></span>
+          </button>
+        </div>
+          <button class='btn'>
+            <%= link_to "#{current_user.username}'s Favorites", user_path(current_user)%>
+          </button>
         <%= button_to 'Log Out', logout_path, class: 'submit-button' %>
       </nav>
     </nav>
@@ -21,7 +33,7 @@
       <h1>GifGenerator</h1>
     </div>
     <main>
-
+      <p class="flash"><%= flash.notice %></p>
     <%= yield %>
   </main>
   </body>

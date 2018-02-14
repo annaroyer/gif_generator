@@ -127,3 +127,12 @@ a:hover {
     }
   }
 }
+
+.btn-group {
+  display: flex;
+}
+
+.btn {
+  background-color: $void;
+  border-color: $jewel;
+}
