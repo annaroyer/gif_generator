@@ -13,9 +13,9 @@
       <header>
         <h1>GifGenerator</h1>
       </header>
-      <nav class="navbar navbar-nav, navbar-right">
-        <%= button_to 'Log Out', logout_path, class: 'submit-button' %>
-      </nav>
+      <section class="navbar navbar-nav navbar-right">
+        <%= render partial: 'sessions/new' %>
+      </section>
     </nav>
     <div class="jumbotron">
       <h1>GifGenerator</h1>

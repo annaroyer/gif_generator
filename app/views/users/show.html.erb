@@ -5,7 +5,9 @@
   <h2><%= category.name %></h2>
   <% category.user_favorites(current_user).each do |favorite| %>
     <img src=<%= favorite.gif.image_path %>>
-    <%= link_to 'Unfavorite', favorite_path(favorite), method: 'delete' %>
+    <%= button_to favorite_path(favorite), method: 'delete' do %>
+      <i class='glyphicon glyphicon-heart'></i>
+    <% end %>
   <% end %>
 <% end %>
 
