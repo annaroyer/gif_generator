@@ -1,0 +1,12 @@
+<section class="jumbotron">
+  <h1><%= @category.name.capitalize %></h1>
+</section>
+
+<main>
+  <%= render partial: 'gifs/gif', collection: @category.gifs %>
+  <ul>
+    <% @categories.each do |category| %>
+      <li><%= link_to category.name, category_path(category) %></li>
+    <% end %>
+  </ul>
+</main>
