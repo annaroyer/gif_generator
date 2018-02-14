@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   namespace 'admin' do
     resources :gifs, only: [:new, :create]
-    resources :categories, only: :index
+    resources :categories, only: [:index, :destroy]
   end
 
   resources :gifs, only: [:index]
