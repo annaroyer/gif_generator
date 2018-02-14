@@ -8,7 +8,7 @@
 
 <main class="column-container">
   <% @categories.each do |category| %>
-    <h2><%= category.name.capitalize %></h2>
+    <h2 class="secondary-heading"><%= link_to category.name.capitalize, category_path(category) %></h2>
     <section class="gifs">
       <% category.user_favorites(current_user).each do |favorite| %>
       <figure class="gif">
