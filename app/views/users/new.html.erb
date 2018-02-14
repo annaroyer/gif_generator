@@ -1,9 +1,13 @@
-<h1>Create a New Account</h1>
+<section class="jumbotron">
+  <h1>Create a New Account</h1>
+</section>
 
-<%= form_for @user do |f| %>
+<main class="column-container">
+  <%= form_for @user do |f| %>
   <%= f.label :username %>
   <%= f.text_field :username %>
   <%= f.label :password %>
   <%= f.password_field :password %>
   <%= f.submit 'Sign Up' %>
-<% end %>
+  <% end %>
+</main>

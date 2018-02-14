@@ -1,14 +1,23 @@
-<h1>Welcome, <%= current_user.username %>!</h1>
+<div class="jumbotron">
+  <h1>
+    <i class='glyphicon glyphicon-heart'></i>
+    <%= current_user.username %>'s Favorite Gifs
+    <i class='glyphicon glyphicon-heart'></i>
+  </h1>
+</div>
 
-<h1>Favorite Gifs</h1>
-<% @categories.each do |category| %>
-  <h2><%= category.name %></h2>
-  <% category.user_favorites(current_user).each do |favorite| %>
-    <img src=<%= favorite.gif.image_path %>>
-    <%= button_to favorite_path(favorite), method: 'delete' do %>
-      <i class='glyphicon glyphicon-heart'></i>
-    <% end %>
+<main class="column-container">
+  <% @categories.each do |category| %>
+    <h2><%= category.name.capitalize %></h2>
+    <section class="gifs">
+      <% category.user_favorites(current_user).each do |favorite| %>
+      <figure class="gif">
+        <img src=<%= favorite.gif.image_path %>>
+        <%= button_to favorite_path(favorite), method: 'delete' do %>
+          <i class='glyphicon glyphicon-heart'></i>
+        <% end %>
+      </figure>
+      <% end %>
+    </section>
   <% end %>
-<% end %>
-
-<%= link_to 'Log Out', logout_path, method: :delete %>
+</main>
