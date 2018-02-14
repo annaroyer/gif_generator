@@ -1,0 +1,24 @@
+text {
+  color: $stark;
+}
+
+.link, label {
+  @include small-text;
+}
+
+a:hover {
+  color: $fuscia;
+  text-decoration: none;
+}
+
+h1 {
+  color: $stark;
+  font: {
+    family: $primary;
+    weight: bold;
+  }
+}
+
+h2 {
+  color: $fuscia;
+}

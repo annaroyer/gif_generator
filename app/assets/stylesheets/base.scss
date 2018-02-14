@@ -1,0 +1,28 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Raleway');
+
+$void: #0E0B16;
+$fuscia: #A239CA;
+$jewel: #4717F6;
+$stark: #E7DFDD;
+$primary: 'Josefin Sans', 'sans-serif';
+$secondary: 'Raleway', 'sans-serif';
+
+@mixin sublime-vivid {
+background: $jewel;
+background: linear-gradient(to right, $fuscia, $jewel);
+}
+
+@mixin centered-box {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin small-text {
+  color: $stark;
+    font: {
+      family: $secondary;
+      size: 17px;
+    }
+  }
