@@ -9,17 +9,10 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <header>
-        <h1>GifGenerator</h1>
-      </header>
-      <section class="navbar navbar-nav navbar-right">
-        <%= render partial: 'sessions/new' %>
-      </section>
-    </nav>
-    <div class="jumbotron">
+    <%= render partial: 'layouts/navbar-welcome' %>
+    <section class="jumbotron">
       <h1>GifGenerator</h1>
-    </div>
+    </section>
     <main>
 
     <%= yield %>
