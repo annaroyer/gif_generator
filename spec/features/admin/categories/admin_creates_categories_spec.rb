@@ -6,13 +6,28 @@ describe 'As an admin' do
       admin = create(:admin)
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(admin)
 
-
       visit new_admin_gif_path
       expect(Category.count).to eq(0)
       expect(page).to_not have_content('breakfast')
-      
+
       fill_in 'Category', with: 'breakfast'
       click_on 'Generate Gif'
+
+      expect(page).to have_content('breakfast')
+      expect(Category.count).to eq(1)
+    end
+  end
+
+  context 'when I visit new admin category, fill in the information and click create' do
+    scenario 'I can create a new category' do
+      admin = create(:admin)
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(admin)
+
+      visit new_admin_category_path
+      expect(Category.count).to eq(0)
+
+      fill_in 'category[name]', with: 'breakfast'
+      click_on 'Create Category'
 
       expect(page).to have_content('breakfast')
       expect(Category.count).to eq(1)
