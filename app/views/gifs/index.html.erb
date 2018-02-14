@@ -1,6 +1,9 @@
+
 <h1>Gifs</h1>
 
 <% @categories.each do |category| %>
   <h2><%= category.name %></h2>
-  <%= render partial: 'gif', collection: category.gifs %>
+  <section class="gifs">
+    <%= render partial: 'gif', collection: category.gifs %>
+  </section>
 <% end %>
