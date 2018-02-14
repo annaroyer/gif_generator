@@ -1,12 +1,14 @@
-text {
+text, a {
   color: $stark;
+  decoration: none;
 }
 
-.link, label {
+.small-link, label {
   @include small-text;
+  text-decoration: none;
 }
 
-a:hover {
+.small-link:hover, a:hover {
   color: $fuscia;
   text-decoration: none;
 }
@@ -19,6 +21,12 @@ h1 {
   }
 }
 
-h2 {
-  color: $fuscia;
+.secondary-heading {
+  color: $stark;
+  text-decoration: none;
+  font: {
+    family: $secondary;
+    size: 40px;
+    weight: bold;
+  }
 }

@@ -1,6 +1,11 @@
 .submit-button {
   background-color: $void;
+  border-color: $stark;
   @include small-text;
+  a {
+    @include small-text;
+    text-decoration: none;
+  }
 }
 
 .submit-button:hover {
@@ -9,11 +14,6 @@
 
 .btn-group {
   display: flex;
-}
-
-.btn {
-  background-color: $void;
-  border-color: $jewel;
 }
 
 button {
