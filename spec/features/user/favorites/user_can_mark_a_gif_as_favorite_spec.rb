@@ -12,7 +12,7 @@ describe 'As a user' do
 
       visit user_path(user)
       expect(page).to have_xpath("//img[contains(@src,'#{gif.image_path}')]")
-      expect(page).to have_content(gif.category)
+      expect(page).to have_content(gif.category.name)
     end
   end
 end

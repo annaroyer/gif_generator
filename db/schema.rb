@@ -10,10 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180212211903) do
+ActiveRecord::Schema.define(version: 20180213035459) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "favorites", force: :cascade do |t|
     t.bigint "gif_id"
@@ -25,10 +31,11 @@ ActiveRecord::Schema.define(version: 20180212211903) do
   end
 
   create_table "gifs", force: :cascade do |t|
-    t.string "category"
     t.string "image_path"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "category_id"
+    t.index ["category_id"], name: "index_gifs_on_category_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -41,4 +48,5 @@ ActiveRecord::Schema.define(version: 20180212211903) do
 
   add_foreign_key "favorites", "gifs"
   add_foreign_key "favorites", "users"
+  add_foreign_key "gifs", "categories"
 end

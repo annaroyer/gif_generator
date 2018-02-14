@@ -6,8 +6,15 @@ describe 'As an admin' do
       admin = create(:admin)
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(admin)
 
-      visit new_admin_gifs_path
-      
+      visit new_admin_gif_path
+      expect(Category.count).to eq(0)
+      expect(page).to_not have_content('breakfast')
+
+      fill_in 'Category', with: 'breakfast'
+      click_on 'Generate Gif'
+
+      expect(page).to have_content('breakfast')
+      expect(Category.count).to eq(1)
     end
   end
 end

@@ -1,0 +1,4 @@
+<% @categories.each do |category| %>
+  <h1><%= category.name %></h1>
+  <%= button_to 'Delete', admin_category_path(category), method: :delete %>
+<% end %>

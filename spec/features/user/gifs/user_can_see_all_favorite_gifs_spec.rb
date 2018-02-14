@@ -11,7 +11,7 @@ describe 'As a user' do
 
       favorites.each do |favorite|
         expect(page).to have_xpath("//img[contains(@src,'#{favorite.gif.image_path}')]")
-        expect(page).to have_content(favorite.gif.category)
+        expect(page).to have_content("#{favorite.gif.category.name}")
       end
     end
   end

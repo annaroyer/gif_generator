@@ -5,4 +5,5 @@ class User < ApplicationRecord
   enum role: %w(default admin)
   has_many :favorites
   has_many :gifs, through: :favorites
+  has_many :categories, through: :gifs
 end
