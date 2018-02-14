@@ -3,7 +3,8 @@ class Admin::GifsController < Admin::BaseController
   end
 
   def create
-    gif = CreateGif.call(params[:category])
+    category = Category.find_or_create_by(name: params[:category])
+    gif = CreateGif.call(category)
     if gif.save
       redirect_to gifs_path
     else
