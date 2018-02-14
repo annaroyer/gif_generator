@@ -9,6 +9,16 @@
   </head>
 
   <body>
+    <nav class="user-nav">
+      <header>
+        <h1>GifGenerator</h1>
+      </header>
+      <nav class="nav-links">
+        <%= link_to 'Favorite Gifs', user_path(current_user) %>
+        <%= link_to 'All Gifs', gifs_path %>
+        <%= link_to 'Log Out', log_out_path %>
+      </nav>
+    </nav>
     <%= yield %>
   </body>
 </html>
