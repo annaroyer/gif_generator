@@ -4,9 +4,9 @@ describe 'As a user' do
   context 'when I visit gif index page' do
     scenario 'I can see all gifs sorted by category' do
       user = create(:user)
-      category_1 = Category.create!(name: 'kakapo')
-      category_2 = Category.create!(name: 'koala')
-      category_3 = Category.create!(name: 'kitten')
+      category_1 = Category.create!(name: 'Kakapo')
+      category_2 = Category.create!(name: 'Koala')
+      category_3 = Category.create!(name: 'Kitten')
       gif_1 = create(:gif, category: category_1)
       gif_2 = create(:gif, category: category_2)
       gif_3 = create(:gif, category: category_3)
