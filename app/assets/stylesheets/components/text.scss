@@ -27,7 +27,6 @@ h1, .primary-heading {
 .secondary-heading {
   color: $stark;
   text-decoration: none;
-  margin-top: 150px;
   font: {
     family: $secondary;
     size: 40px;
@@ -38,6 +37,7 @@ h1, .primary-heading {
 .row-header {
   display: flex;
   align-items: center;
+  margin-top: 70px;
   button {
     padding-top: 18px;
     margin-left: 5px;
