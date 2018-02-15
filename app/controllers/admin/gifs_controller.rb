@@ -1,7 +1,4 @@
 class Admin::GifsController < Admin::BaseController
-  def new
-  end
-
   def create
     category = Category.find_or_create_by(name: params[:category])
     gif = CreateGif.call(category)
