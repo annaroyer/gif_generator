@@ -7,3 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create!(username: 'Anna', password: 'password', role: 1)
+tags = ['animals', 'food', 'memes', 'sports', 'emotions', 'reactions', 'celebrities', 'cartoons', 'movies', 'politics', 'decades']
+tags.each do |tag|
+  category = Category.create!(name: tag)
+  8.times { CreateGif.call(category)}
+end
