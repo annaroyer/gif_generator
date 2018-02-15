@@ -1,6 +1,7 @@
 class GifsController < ApplicationController
   def index
     @categories = Category.alphabetized
+    @favorites = current_user.gifs
   end
 
   def update
