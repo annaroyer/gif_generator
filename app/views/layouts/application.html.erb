@@ -9,10 +9,18 @@
   </head>
 
   <body>
-    <%= render partial: 'layouts/navbar-user' %>
+    <% if current_user.nil? %>
+      <%= render partial: 'layouts/navbar-welcome' %>
+    <% elsif current_user.admin? %>
+      <%= render partial: 'layouts/navbar-admin' %>
+    <% else %>
+      <%= render partial: 'layouts/navbar-user' %>
+    <% end %>
 
       <p class="flash"><%= flash.notice %></p>
     <%= yield %>
-    
+    <footer class="navbar-bottom">
+      <%= image_tag 'Giphy_Logo.gif' %>
+    </footer>
   </body>
 </html>
