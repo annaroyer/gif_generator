@@ -33,3 +33,12 @@ h1, .primary-heading {
     weight: bold;
   }
 }
+
+.row-header {
+  display: flex;
+  align-items: center;
+  button {
+    padding-top: 18px;
+    margin-left: 5px;
+  }
+}
