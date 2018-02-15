@@ -8,7 +8,7 @@
     <% else %>
       <%= form_tag favorites_path do %>
         <%= hidden_field_tag :gif_id, gif.id %>
-        <button  type='submit'>
+        <button type="submit", id="favorite">
           <i class="glyphicon glyphicon-heart-empty"></i>
         </button>
       <% end %>
