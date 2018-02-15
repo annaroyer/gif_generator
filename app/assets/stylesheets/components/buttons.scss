@@ -1,5 +1,5 @@
 .submit-button {
-  background-color: $void;
+  background-color: transparent;
   border-color: $stark;
   @include small-text;
   a {
@@ -8,7 +8,7 @@
   }
 }
 
-.submit-button:hover {
+.submit-button:hover{
   border-color: $fuscia;
 }
 

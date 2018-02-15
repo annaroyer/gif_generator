@@ -9,15 +9,18 @@ text, a {
 }
 
 .small-link:hover, a:hover {
-  color: $fuscia;
+  color: $stark;
   text-decoration: none;
+  background-color: $void;
+  border-bottom: 2px double $fuscia;
 }
 
-h1 {
+h1, .primary-heading {
   color: $stark;
   font: {
     family: $primary;
     weight: bold;
+    size: 40px;
   }
 }
 
