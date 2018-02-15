@@ -1,13 +1,13 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <header class="navbar-header">
-    <h1 class="primary-heading"><%= link_to 'GifGenerator', root_path %></h1>
+    <h1 class="primary-heading"><%= link_to 'GifGenerator', root_path, class: 'large-link' %></h1>
   </header>
   <section class="navbar-nav navbar-center">
     <%= render partial: 'admin/gifs/new' %>
   </section>
   <ul class="nav navbar-nav, navbar-right">
-    <li><%= link_to 'Gifs', gifs_path %></li>
-    <li><%= link_to  "Favorites", user_path(current_user) %></li>
+    <li><%= link_to 'Gifs', gifs_path, class: 'large-link' %></li>
+    <li><%= link_to  "Favorites", user_path(current_user), class: 'large-link' %></li>
   </ul>
   <%= button_to 'Log Out', logout_path, class: 'submit-button', method: :delete %>
 </nav>

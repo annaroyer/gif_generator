@@ -16,11 +16,14 @@ button {
   background-color: $void;
   border-color: $void;
   outline: none;
-  color: $fuscia;
+  a {
+    color: $stark;
+    border: none;
+  }
   .glyphicon {
     font-size: 2em;
   }
   .glyphicon:hover {
-    color: $jewel;
+    color: $fuscia;
   }
 }
