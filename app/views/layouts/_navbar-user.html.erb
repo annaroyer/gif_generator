@@ -1,0 +1,10 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <header>
+    <h1>GifGenerator</h1>
+  </header>
+  <section class="navbar navbar-nav, navbar-right">
+    <button class="submit-button"><%= link_to 'Gifs', gifs_path %></button>
+    <button class="submit-button"><%= link_to  "Favorites", user_path(current_user) %></button>
+    <%= button_to 'Log Out', logout_path, class: 'submit-button', method: :delete %>
+  </section>
+</nav>

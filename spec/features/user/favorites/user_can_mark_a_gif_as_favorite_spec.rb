@@ -8,9 +8,10 @@ describe 'As a user' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
       visit gifs_path
-      click_on 'favorite'
+      click_link('favorite')
 
       visit user_path(user)
+
       expect(page).to have_xpath("//img[contains(@src,'#{gif.image_path}')]")
       expect(page).to have_content(gif.category.name)
     end

@@ -9,20 +9,20 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <header>
-        <h1>GifGenerator</h1>
-      </header>
-      <nav class="navbar navbar-nav, navbar-right">
-        <%= button_to 'Log Out', logout_path, class: 'submit-button' %>
-      </nav>
-    </nav>
-    <div class="jumbotron">
-      <h1>GifGenerator</h1>
-    </div>
-    <main>
+    <div class="content">
+      <% if current_user.nil? %>
+        <%= render partial: 'layouts/navbar-welcome' %>
+      <% elsif current_user.admin? %>
+        <%= render partial: 'layouts/navbar-admin' %>
+      <% else %>
+        <%= render partial: 'layouts/navbar-user' %>
+      <% end %>
 
+      <p class="flash"><%= flash.notice %></p>
     <%= yield %>
-  </main>
+    </div>
+    <footer class="navbar-bottom">
+      <%= image_tag 'Giphy_Logo.gif' %>
+    </footer>
   </body>
 </html>

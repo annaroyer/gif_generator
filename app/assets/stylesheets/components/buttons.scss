@@ -1,0 +1,30 @@
+.submit-button {
+  background-color: transparent;
+  border-color: $stark;
+  @include small-text;
+  a {
+    @include small-text;
+    text-decoration: none;
+  }
+}
+
+.submit-button:hover{
+  border-color: $fuscia;
+}
+
+.btn-group {
+  display: flex;
+}
+
+button {
+  background-color: $void;
+  border-color: $void;
+  outline: none;
+  color: $fuscia;
+  .glyphicon {
+    font-size: 2em;
+  }
+  .glyphicon:hover {
+    color: $jewel;
+  }
+}

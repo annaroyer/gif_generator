@@ -13,7 +13,7 @@ describe 'As a visitor' do
       click_on 'Sign Up'
 
       expect(current_path).to eq(user_path(1))
-      expect(page).to have_content('Welcome, giflover!')
+      expect(page).to have_content("giflover's Favorite Gifs")
     end
   end
 end

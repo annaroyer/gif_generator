@@ -1,0 +1,35 @@
+text, a {
+  color: $stark;
+  decoration: none;
+}
+
+.small-link, label {
+  @include small-text;
+  text-decoration: none;
+}
+
+.small-link:hover, a:hover {
+  color: $stark;
+  text-decoration: none;
+  background-color: $void;
+  border-bottom: 2px double $fuscia;
+}
+
+h1, .primary-heading {
+  color: $stark;
+  font: {
+    family: $primary;
+    weight: bold;
+    size: 40px;
+  }
+}
+
+.secondary-heading {
+  color: $stark;
+  text-decoration: none;
+  font: {
+    family: $secondary;
+    size: 40px;
+    weight: bold;
+  }
+}

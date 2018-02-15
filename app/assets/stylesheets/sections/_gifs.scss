@@ -1,0 +1,18 @@
+.gifs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  .gif {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    .btn-group {
+      display: flex;
+    }
+  }
+}
+
+img {
+  max-width: 250px;
+  max-height: 300px;
+}
