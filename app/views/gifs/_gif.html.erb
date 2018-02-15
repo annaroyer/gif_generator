@@ -2,15 +2,17 @@
   <img src=<%= gif.image_path %> alt=<%= gif.category %>>
   <div class="btn-group">
     <% if @favorites.include?(gif) %>
-      <%= button_to gif_path(gif), method: 'put' do %>
+      <button>
+        <%= link_to gif_path(gif), method: 'put', class: 'unfavorite' do %>
           <i class='glyphicon glyphicon-heart'></i>
-      <% end %>
+        <% end %>
+      </button>
     <% else %>
       <%= form_tag favorites_path do %>
         <%= hidden_field_tag :gif_id, gif.id %>
-        <button type="submit", id="favorite">
+        <button><a type="submit" class="favorite">
           <i class="glyphicon glyphicon-heart-empty"></i>
-        </button>
+        </a></button>
       <% end %>
     <% end %>
   </div>

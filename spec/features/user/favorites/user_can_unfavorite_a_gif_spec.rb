@@ -10,8 +10,8 @@ describe 'As a user' do
       visit user_path(user)
       expect(page).to have_xpath("//img[contains(@src,'#{favorite.gif.image_path}')]")
       expect(page).to have_content(favorite.gif.category.name)
-
-      click_link 'Unfavorite'
+      
+      find(".unfavorite").click
 
       expect(page).to_not have_xpath("//img[contains(@src,'#{favorite.gif.image_path}')]")
       expect(page).to_not have_content(favorite.gif.category.name)

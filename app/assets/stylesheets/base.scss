@@ -14,11 +14,6 @@ background: $jewel;
 background: linear-gradient(to right, $fuscia, $jewel);
 }
 
-@mixin centered-box {
-  display: flex;
-  justify-content: center;
-}
-
 @mixin small-text {
   color: $stark;
     font: {

@@ -8,14 +8,16 @@
 
 <main class="column-container">
   <% @categories.each do |category| %>
-    <h2 class="secondary-heading"><%= link_to category.name.capitalize, category_path(category) %></h2>
+    <h2 class="secondary-heading"><%= link_to category.name.capitalize, category_path(category), class: 'large-link' %></h2>
     <section class="gifs">
       <% category.user_favorites(current_user).each do |favorite| %>
       <figure class="gif">
         <img src=<%= favorite.gif.image_path %>>
-        <%= button_to favorite_path(favorite), method: 'delete' do %>
-          <i class='glyphicon glyphicon-heart'></i>
-        <% end %>
+        <button>
+          <%= link_to favorite_path(favorite), method: 'delete', class: 'unfavorite' do %>
+            <i class='glyphicon glyphicon-heart'></i>
+          <% end %>
+        </button>
       </figure>
       <% end %>
     </section>

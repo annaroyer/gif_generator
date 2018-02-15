@@ -1,11 +1,28 @@
 <section class="jumbotron">
   <h1>ALL THE GIFS</h1>
 </section>
+
 <main class='column-container'>
-<% @categories.each do |category| %>
-  <h2 class="secondary-heading"><%= link_to category.name.capitalize, category_path(category) %></h2>
-  <section class="gifs">
-    <%= render partial: 'gif', collection: category.gifs %>
-  </section>
-<% end %>
+  <% @categories.each do |category| %>
+
+    <header class="row-header">
+      <h2 class="secondary-heading">
+        <%= link_to category.name.capitalize, category_path(category), class: 'large-link' %>
+      </h2>
+      <% if current_user.admin? %>
+        <button><%= link_to admin_category_path(category),
+                                          method: :delete,
+                                          data: {confirm: 'Are you sure?'},
+                                          id: 'delete' do %>
+          <i class="glyphicon glyphicon-trash"></i>
+        <% end %>
+        </button>
+      <% end %>
+    </header>
+
+    <section class="gifs">
+      <%= render partial: 'gif', collection: category.gifs %>
+    </section>
+
+  <% end %>
 </main>

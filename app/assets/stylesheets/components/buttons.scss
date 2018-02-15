@@ -8,23 +8,22 @@
   }
 }
 
-.submit-button:hover{
+.submit-button:hover {
   border-color: $fuscia;
-}
-
-.btn-group {
-  display: flex;
 }
 
 button {
   background-color: $void;
   border-color: $void;
   outline: none;
-  color: $fuscia;
+  a {
+    color: $stark;
+    border: none;
+  }
   .glyphicon {
     font-size: 2em;
   }
   .glyphicon:hover {
-    color: $jewel;
+    color: $fuscia;
   }
 }

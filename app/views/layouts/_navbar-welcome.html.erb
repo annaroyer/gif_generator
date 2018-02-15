@@ -1,9 +1,9 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <header class="navbar-header">
-    <h1 class="primary-heading"><%= link_to 'GifGenerator', root_path %></h1>
+    <h1 class="primary-heading"><%= link_to 'GifGenerator', root_path, class: 'large-link' %></h1>
   </header>
   <ul class="nav navbar-nav, navbar-right">
-    <li><%= link_to 'Gifs', gifs_path %></li>
+    <li><%= link_to 'Gifs', gifs_path, class: 'large-link' %></li>
   </ul>
   <section>
     <%= render partial: 'sessions/new' %>

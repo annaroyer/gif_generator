@@ -2,11 +2,24 @@
   <h1><%= @category.name.capitalize %></h1>
 </section>
 
-<main>
-  <%= render partial: 'gifs/gif', collection: @category.gifs %>
+<main class="row-container">
   <ul>
     <% @categories.each do |category| %>
-      <li><%= link_to category.name, category_path(category) %></li>
+      <li class="row-header">
+        <h2 class="secondary-heading">
+          <%= link_to category.name.capitalize, category_path(category) %>
+        </h2>
+        <% if current_user.admin? %>
+          <%= button_to admin_category_path(category),
+                                            method: :delete,
+                                            data: {confirm: 'Are you sure?'} do %>
+            <i class="glyphicon glyphicon-trash"></i>
+          <% end %>
+        <% end %>
+      </li>
     <% end %>
   </ul>
+  <section class="gifs">
+    <%= render partial: 'gifs/gif', collection: @category.gifs %>
+  </section>
 </main>
